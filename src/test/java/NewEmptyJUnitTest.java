@@ -36,9 +36,10 @@ public class NewEmptyJUnitTest {
     
     @Test
     public void MyFirstTest () throws InterruptedException {
-        driver.get("http://google.com/");
-        //driver.wait(5, 0);
-        driver.findElement(By.name("q")).sendKeys("webdriver");
+        driver.get("http://bash.im");
+        driver.findElement(By.id("text")).sendKeys("185");
+        driver.findElement(By.xpath("//*[@id=\"search\"]/button")).click();
+        
     }
     
     @After
@@ -46,6 +47,8 @@ public class NewEmptyJUnitTest {
          driver.quit();
         driver = null;
     }
+    
+    
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
